@@ -1,0 +1,18 @@
+[Unit]
+Description=STBot
+After=syslog.target network.target
+
+[Service]
+SuccessExitStatus=143
+
+
+User=root
+Group=root
+
+
+Type=simple
+
+ExecStart=java -jar /opt/bots/tg/st-bot.jar
+
+[Install]
+WantedBy=multi-user.target
